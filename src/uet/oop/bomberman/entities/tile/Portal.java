@@ -17,9 +17,10 @@ public class Portal extends Tile {
 	@Override
 	public boolean collide(Entity e) {
         // TODO: xử lý khi Bomber đi vào
-        if (e instanceof Bomber) {
+        if (e instanceof Bomber){
             if (_board.detectNoEnemies())
-                _board.nextLevel();
+                _board.endGame();
+            else return false;
         }
         return true;
     }

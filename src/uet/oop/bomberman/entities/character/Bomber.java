@@ -150,8 +150,8 @@ public class Bomber extends Character {
         // TODO: kiểm tra có đối tượng tại vị trí chuẩn bị di chuyển đến và có thể di chuyển tới đó hay không
 
         for (int i = 0 ; i < 4; i++ ){
-            double xt = ((_x + x) + i % 2 * 10)/Game.TILES_SIZE;
-            double yt = ((_y + y) + i / 2 * 10 - 13)/Game.TILES_SIZE;
+            double xt = ((_x + x) + i % 2 * 9)/Game.TILES_SIZE;
+            double yt = ((_y + y) + i / 2 * 10 - 12)/Game.TILES_SIZE;
             Entity e = _board.getEntity(xt, yt, this);
 
             if (!e.collide(this)){

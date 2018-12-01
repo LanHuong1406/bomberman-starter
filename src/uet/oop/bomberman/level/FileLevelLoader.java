@@ -72,9 +72,8 @@ public class FileLevelLoader extends LevelLoader {
         for (int _x = 0 ; _x < _width ; _x++ ){
             for (int _y = 0 ; _y < _height ; _y++ ){
                 int pos = _x + _y * getWidth();
-                char m = _map[_y][_x];
 
-                switch (m){
+                switch (_map[_y][_x]){
                     //them wall
                     case '#' :
                         int xw = _x, yw = _y;
